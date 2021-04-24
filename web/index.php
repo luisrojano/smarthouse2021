@@ -24,7 +24,7 @@ $app->get('/', function() use($app) {
 
 $app->get('/consulta', function() use($app) {
   $app['monolog']->addDebug('logging output.');
-  return $app['twig']->render('index.twig');
+  return "Bienvenido a una consulta."
 });
 
 $app->run();
