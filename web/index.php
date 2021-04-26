@@ -22,4 +22,9 @@ $app->get('/', function() use($app) {
   return $app['twig']->render('index.twig');
 });
 
+$app->get('/consulta', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return "Bienvenido a una consulta.";
+});
+
 $app->run();
