@@ -1,5 +1,5 @@
 .jumbotron {
-  background: #532F8C;
+  background: #FF0000;
   color: white;
   padding-bottom: 80px;
 }
@@ -34,3 +34,4 @@
 .jumbotron .lang-logo img {
   max-width: 100%;
 }
+
