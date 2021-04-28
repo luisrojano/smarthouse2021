@@ -1,14 +1,11 @@
 .jumbotron {
-  background: #FF0000;
+  background: url("http://www.smarthouseintegradores.com/wp-content/uploads/2016/11/smarthouse-que-hacemos1.jpg");
   color: yellow;
   padding-bottom: 10px;
 }
 .jumbotron .btn-primary {
   background: #000000;
   border-color: #845ac7;
-  position: relative;
-  top:300px;
-  left:50px;
 }
 .jumbotron .btn-primary:hover {
   background: #33FF33;
