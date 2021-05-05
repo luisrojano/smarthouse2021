@@ -24,7 +24,7 @@ $app->get('/', function() use($app) {
   return $app['twig']->render('index.twig');
 });
 
-$app->get('/consulta/{nombre}/{apellido}/{edad}', function(Request $request) use($app) {
+$app->get('/consulta/{nombre}/{apellido}/{edad}', function() use($app) {
   $app['monolog']->addDebug('logging output.');
 
   //$nombre = $request->query->get('nombre');
