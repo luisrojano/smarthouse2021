@@ -24,12 +24,8 @@ $app->get('/', function() use($app) {
   return $app['twig']->render('index.twig');
 });
 
-$app->get('/consulta/{nombre}/{apellido}/{edad}', function() use($app) {
+$app->get('/consulta/{nombre}/{apellido}/{edad}', function($nombre) use($app) {
   $app['monolog']->addDebug('logging output.');
-
-  //$nombre = $request->query->get('nombre');
-  //$apellido = $request->query->get('apellido');
-  //$edad = $request->query->get('edad');
 
   return "Bienvenido a una consulta " . $nombre . " " . $apellido . ". Tu edad es " . $edad;
 });
