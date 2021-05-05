@@ -22,9 +22,10 @@ $app->get('/', function() use($app) {
   return $app['twig']->render('index.twig');
 });
 
-$app->get('/consulta', function() use($app) {
+$app->get('/consulta/{nombre}/{apellido}/{edad}', function() use($app) {
   $app['monolog']->addDebug('logging output.');
-  return "Bienvenido a una consulta.";
+
+  return "Bienvenido a una consulta " . $nombre . " " . $apellido ". Tu edad es " . $edad;
 });
 
 $app->run();
