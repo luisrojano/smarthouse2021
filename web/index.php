@@ -27,9 +27,9 @@ $app->get('/', function() use($app) {
 $app->get('/consulta/{nombre}/{apellido}/{edad}', function(Request $request) use($app) {
   $app['monolog']->addDebug('logging output.');
 
-  $nombre = $request->query->get('nombre');
-  $apellido = $request->query->get('apellido');
-  $edad = $request->query->get('edad');
+  //$nombre = $request->query->get('nombre');
+  //$apellido = $request->query->get('apellido');
+  //$edad = $request->query->get('edad');
 
   return "Bienvenido a una consulta " . $nombre . " " . $apellido . ". Tu edad es " . $edad;
 });
