@@ -31,7 +31,7 @@ $app->get('/consulta/{nombre}/{apellido}/{edad}', function(Request $request) use
   $apellido = $request->query->get('apellido');
   $edad = $request->query->get('edad');
 
-  return "Bienvenido a una consulta " . $nombre . " " . $apellido ". Tu edad es " . $edad;
+  return "Bienvenido a una consulta " . $nombre . " " . $apellido . ". Tu edad es " . $edad;
 });
 
 $app->run();
