@@ -35,12 +35,15 @@ $app->get('/consulta/{primer_nombre}/{apellido}/{edad}', function($primer_nombre
   return "Bienvenido a una consulta " . $primer_nombre . " " . $apellido . ". Todo parece indicar que naciste en el año " . $ano_nac;
 });
 
-$orden = 0;
 
-$app->get('/ordenLed', function($orden) use($app) {
-  
-
-  return $orden;
+$app->get('/ordenLed/$numero', function($numero) use($app) {
+  if(($numero % 2)==0){
+  	return 1;
+  }
+  else
+  {
+  	return 0;
+  }
 });
 
 $app->run();
