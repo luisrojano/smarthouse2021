@@ -28,6 +28,8 @@ $app->get('/consulta/{primer_nombre}/{apellido}/{edad}', function($primer_nombre
   
   $app['monolog']->addDebug('logging output.');
 
+  $primer_nombre = $primer_nombre + 10;
+
   $ano_nac = 2021 - $edad;
 
   return "Bienvenido a una consulta " . $primer_nombre . " " . $apellido . ". Todo parece indicar que naciste en el año " . $ano_nac;
