@@ -37,7 +37,7 @@ $app->get('/consulta/{primer_nombre}/{apellido}/{edad}', function($primer_nombre
 
 $orden = 0;
 
-$app->get('/ordenLed', function() use($app) {
+$app->get('/ordenLed', function($orden) use($app) {
   
 
   return $orden;
