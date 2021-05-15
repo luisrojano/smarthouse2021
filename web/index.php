@@ -36,7 +36,7 @@ $app->get('/consulta/{primer_nombre}/{apellido}/{edad}', function($primer_nombre
 });
 
 
-$app->post('/ordenLed', function($Request) use($app) {
+$app->post('/ordenLed', function(Request $request) use($app) {
   
   Return "OK";
 });
