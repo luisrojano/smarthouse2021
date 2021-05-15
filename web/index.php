@@ -36,14 +36,9 @@ $app->get('/consulta/{primer_nombre}/{apellido}/{edad}', function($primer_nombre
 });
 
 
-$app->get('/ordenLed/{numero}', function($numero) use($app) {
-  if(($numero % 2)==0){
-  	return 1;
-  }
-  else
-  {
-  	return 0;
-  }
+$app->post('/ordenLed', function($Request) use($app) {
+  
+  Return "OK";
 });
 
 $app->run();
