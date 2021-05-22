@@ -39,7 +39,7 @@ $app->get('/consulta/{primer_nombre}/{apellido}/{edad}', function($primer_nombre
 
 
 $app->post('/ordenLed', function (Request $request) use ($app) {
-  $temperatura = $request->request->get('temperatura');
+  $temperatura = $request->request->get('title');
 
   Return $temperatura;
 });
