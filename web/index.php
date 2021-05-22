@@ -44,9 +44,7 @@ $app->post('/ordenLed', function (Request $request) use ($app) {
         'body'  => $request->request->get('body'),
     );
 
-    $post['id'] = createPost($post);
-
-    return $app->json($post, 201);
+    return $post['title'];
 });
 
 $app->run();
