@@ -2,6 +2,7 @@
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\ParameterBag;
 
 require('../vendor/autoload.php');
 
@@ -38,10 +39,7 @@ $app->get('/consulta/{primer_nombre}/{apellido}/{edad}', function($primer_nombre
 
 
 $app->post('/ordenLed', function (Request $request) use ($app) {
-  $temperatura = $request->get('temperatura');
-  $rpm = $request->get('rpm');
-  $voltaje = $request->get('voltaje');
-
+  $temperatura = $request->request->get('temperatura');
 
   Return $temperatura;
 });
