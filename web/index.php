@@ -37,8 +37,12 @@ $app->get('/consulta/{primer_nombre}/{apellido}/{edad}', function($primer_nombre
 
 
 $app->post('/ordenLed', function(Request $request) use($app) {
-  
-  Return "OK";
+  $temperatura = $request->get('temperatura');
+  $rpm = $request->get('rpm');
+  $voltaje = $request->get('voltaje');
+
+
+  Return $temperatura;
 });
 
 $app->run();
