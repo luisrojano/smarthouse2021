@@ -43,7 +43,7 @@ $app->post('/ordenLed', function (Request $request) use ($app) {
   $voltaje = $request->get('voltaje');
 
 
-  Return "OK";
+  Return $temperatura;
 });
 
 $app->run();
