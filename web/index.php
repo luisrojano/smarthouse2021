@@ -39,9 +39,14 @@ $app->get('/consulta/{primer_nombre}/{apellido}/{edad}', function($primer_nombre
 
 
 $app->post('/ordenLed', function (Request $request) use ($app) {
-  $temperatura = $request->request->get('title');
+  $post = array(
+        'title' => $request->request->get('title'),
+        'body'  => $request->request->get('body'),
+    );
 
-  Return $temperatura;
+    $post['id'] = createPost($post);
+
+    return $app->json($post, 201);
 });
 
 $app->run();
