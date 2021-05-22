@@ -1,6 +1,7 @@
 <?php
 
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 require('../vendor/autoload.php');
 
@@ -36,13 +37,13 @@ $app->get('/consulta/{primer_nombre}/{apellido}/{edad}', function($primer_nombre
 });
 
 
-$app->post('/ordenLed', function(Request $request) use($app) {
+$app->post('/ordenLed', function (Request $request) use ($app) {
   $temperatura = $request->get('temperatura');
   $rpm = $request->get('rpm');
   $voltaje = $request->get('voltaje');
 
 
-  Return $temperatura;
+  Return "OK";
 });
 
 $app->run();
