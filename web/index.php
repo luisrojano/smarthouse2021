@@ -52,7 +52,7 @@ $app->get('/ordenLed', function (Request $request) use ($app) {
   $query = "SELECT * FROM on_off ORDER BY fecha DESC LIMIT 1";
   $consulta = pg_query($query);
   $datos = pg_fetch_row($consulta);
-  return $datos[3];
+  return $datos;
 });
 
 $app->run();
