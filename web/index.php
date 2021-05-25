@@ -49,7 +49,7 @@ $app->post('/ordenLed', function (Request $request) use ($app) {
 $app->get('/ordenLed', function () use ($app) {
   $conexion = pg_connect("host=ec2-107-20-153-39.compute-1.amazonaws.com port=5432 dbname=dfc71v1qi0g38p user=wcqmzhukfzyezr password=1d9be4c010f92a3f6cb01d222f0528ddd2e51f8b3e2089d03994e5b3732387dc");
 
-  $query = "SELECT * FROM on_off WHERE id>1 ORDER BY fecha DESC LIMIT 1";
+  $query = "SELECT * FROM onoff WHERE id>1 ORDER BY fecha DESC LIMIT 1";
   $consulta = pg_query($conexion, $query);
   $datos = pg_fetch_row($consulta);
   return $datos;
