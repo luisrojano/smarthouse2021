@@ -43,12 +43,16 @@ $app->post('/ordenLed', function (Request $request) use ($app) {
   $rpm = $request->get('rpm');
   $voltaje = $request->get('voltaje');
 
-
-
-  
-
-
   Return $temperatura;
+});
+
+$app->get('/ordenLed', function (Request $request) use ($app) {
+  $conexion = pg_connect("host=ec2-107-20-153-39.compute-1.amazonaws.com port=5432 dbname=dfc71v1qi0g38p user=wcqmzhukfzyezr password=1d9be4c010f92a3f6cb01d222f0528ddd2e51f8b3e2089d03994e5b3732387dc");
+
+  $query = "SELECT * FROM on_off ORDER BY fecha DESC LIMIT 1";
+  $consulta = pg_query($query);
+  $datos = pg_fetch_row($consulta);
+  return $datos[3];
 });
 
 $app->run();
