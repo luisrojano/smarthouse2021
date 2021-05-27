@@ -1,6 +1,6 @@
 {
   "name": "Smart House,
-  "description": "Esta Aplicacion gestiona el control de encendido de una carga electrica",
-  "repository": "https://github.com/heroku/php-getting-started",
+  "description": "Esta aplicacion gestiona el control de encendido de una carga electrica",
+  "repository": "https://github.com/luisrojano/smarthouse2021",
   "addons": []
 }
