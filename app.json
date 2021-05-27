@@ -1,6 +1,6 @@
 {
-  "name": "Start on Heroku: PHP",
-  "description": "A barebones PHP app that makes use of the Silex web framework",
+  "name": "Smart House,
+  "description": "Esta Aplicacion gestiona el control de encendido de una carga electrica",
   "repository": "https://github.com/heroku/php-getting-started",
   "addons": []
 }
