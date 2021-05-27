@@ -1,6 +1,6 @@
 {
   "name": "Smart House,
-  "description": "Esta aplicacion gestiona el control de encendido de una carga electrica",
+  "description": "Esta aplicacion gestiona el control de encendido y apagado de una carga electrica",
   "repository": "https://github.com/luisrojano/smarthouse2021",
   "addons": []
 }
